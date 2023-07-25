@@ -171,11 +171,11 @@ namespace RPSLS
         {
             if (playerOne.score > playerTwo.score)
             {
-                Console.WriteLine($"Congrats {playerOne.name} Player One Wins");
+                Console.WriteLine($"Congrats {playerOne.name} Wins!!!");
             }
             else if (playerTwo.score > playerOne.score)
             {
-                Console.WriteLine($"Congrats {playerTwo.name} Two Wins");
+                Console.WriteLine($"Congrats {playerTwo.name} Wins!!!");
             }
             else
             {

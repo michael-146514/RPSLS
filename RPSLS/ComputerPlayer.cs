@@ -18,9 +18,10 @@ namespace RPSLS
 
         public override void ChooseGesture()
         {
-            var random = new Random();
+            Random random = new Random();
             int rand = random.Next(gestures.Count);
-            Console.WriteLine(rand);
+            chosenGesture = gestures[rand]; 
+            Console.WriteLine($"{name} picked {chosenGesture}");
         }
 
         public override void PickName()
