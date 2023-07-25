@@ -11,10 +11,8 @@ namespace RPSLS
 
         public ComputerPlayer(string name) : base(name)
         {
-            name = name;
+         
         }
-
-
 
         public override void ChooseGesture()
         {
@@ -26,7 +24,6 @@ namespace RPSLS
 
         public override void PickName()
         {
-
             name = "Computer Robo";
         }
 
