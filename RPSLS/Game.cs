@@ -12,8 +12,9 @@ namespace RPSLS
         //Member Variabes (HAS A)
         public Player playerOne;
         public Player playerTwo;
-       public int numPlayers;
-       public int rounds = 1;
+        public int numPlayers;
+        public int rounds = 1;
+        public int roundCheeck = 0;
         
         //Constructor
         public Game()
@@ -190,7 +191,12 @@ namespace RPSLS
 
             for(int i = 1; i <= rounds; i++)
             {
-              playerOne.ChooseGesture();
+                if (playerOne.score >= roundCheeck || playerTwo.score >= roundCheeck)
+                {
+                    break; 
+                }
+
+                playerOne.ChooseGesture();
               playerTwo.ChooseGesture();
               CompareGestures();
               displayPoints();
@@ -205,6 +211,7 @@ namespace RPSLS
             Console.WriteLine("How many rounds do you want to play?");
             int rounds = Convert.ToInt32(Console.ReadLine());
             this.rounds = rounds;
+            roundCheeck = rounds / 2;
             return rounds;
         }
 
